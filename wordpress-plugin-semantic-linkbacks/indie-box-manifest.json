@@ -1,0 +1,44 @@
+{
+    "type"  : "accessory",
+
+    "info" : {
+        "package"         : "##pkgname##",
+        "name"            : "Semantic Linkbacks",
+        "tagline"         : "##pkgdesc##",
+        "description"     : "##description##",
+
+        "developer"       : "##developer##",
+        "maintainer"      : "##maintainer##",
+
+        "upstreamversion" : "##pkgver##",
+        "packageversion"  : "##pkgver##-##pkgrel##",
+
+        "licenses" : [
+            "##license##"
+        ]
+    },
+    "accessoryinfo" : {
+        "appid"            : "indie-wordpress",
+        "appaccessoryid"   : "##accessoryid##",
+        "appaccessorytype" : "plugin"
+    },
+
+    "roles" : {
+        "apache2" : {
+            "appconfigitems" : [
+                {
+                    "type"   : "directorytree",
+                    "name"   : "wp-content/plugins/semantic-linkbacks",
+                    "source" : "semantic-linkbacks",
+                }
+            ],
+            "installers" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "/usr/share/indie-wordpress/bin/activate-plugin.pl"
+                }
+            ]
+        }
+    }
+}
+

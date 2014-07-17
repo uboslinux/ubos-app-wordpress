@@ -1,0 +1,43 @@
+{
+    "type"  : "accessory",
+
+    "info" : {
+        "package"         : "##pkgname##",
+        "name"            : "Social",
+        "tagline"         : "##pkgdesc##",
+
+        "developer"       : "##developer##",
+        "maintainer"      : "##maintainer##",
+
+        "upstreamversion" : "##pkgver##",
+        "packageversion"  : "##pkgver##-##pkgrel##",
+
+        "licenses" : [
+            "##license##"
+        ]
+    },
+    "accessoryinfo" : {
+        "appid"            : "wordpress",
+        "appaccessoryid"   : "##accessoryid##",
+        "appaccessorytype" : "plugin"
+    },
+
+    "roles" : {
+        "apache2" : {
+            "appconfigitems" : [
+                {
+                    "type"   : "directorytree",
+                    "name"   : "wp-content/plugins/social",
+                    "source" : "social",
+                }
+            ],
+            "installers" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "/usr/share/wordpress/bin/activate-plugin.pl"
+                }
+            ]
+        }
+    }
+}
+

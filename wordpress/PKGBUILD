@@ -1,0 +1,51 @@
+_developer=http://wordpress.org/
+_maintainer=http://indieboxproject.org/
+pkgname=$(basename $(pwd))
+pkgver=3.9.1
+pkgrel=1
+pkgdesc="Blog tools, publishing platform, and CMS"
+arch=('any')
+url=$_developer
+_license=GPL
+license=("$_license")
+groups=()
+depends=()
+backup=()
+source=("http://wordpress.org/wordpress-${pkgver}.tar.gz")
+options=('!strip')
+md5sums=('46e303b587ba3d1f951b348d2c477c3c')
+# from http://stackoverflow.com/questions/1251999/sed-how-can-i-replace-a-newline-n
+_parameterize=$(cat <<END
+    s!##pkgname##!$pkgname!g;
+    s/##pkgdesc##/$pkgdesc/g;
+    s!##developer##!$_developer!g;
+    s!##maintainer##!$_maintainer!g;
+    s!##pkgver##!$pkgver!g;
+    s!##pkgrel##!$pkgrel!g;
+    s!##license##!$_license!g;
+    s!##description##!$_description!g;
+END
+)
+
+package() {
+# Manifest
+    mkdir -p $pkgdir/var/lib/indie-box/manifests
+    perl -pe "$_parameterize" $startdir/indie-box-manifest.json > $pkgdir/var/lib/indie-box/manifests/${pkgname}.json
+    chmod 0644 $pkgdir/var/lib/indie-box/manifests/${pkgname}.json
+
+# Icons
+    mkdir -p $pkgdir/srv/http/_appicons/$pkgname
+    install -m644 $startdir/appicons/{72x72,144x144}.png $pkgdir/srv/http/_appicons/$pkgname/
+
+# Templates
+    mkdir -p $pkgdir/usr/share/${pkgname}/tmpl
+    install -m755 $startdir/tmpl/{htaccess,wp-content-htaccess}.tmpl $pkgdir/usr/share/${pkgname}/tmpl/
+    install -m755 $startdir/tmpl/wp-config.pl $pkgdir/usr/share/${pkgname}/tmpl/
+
+# Scripts
+    mkdir -p $pkgdir/usr/share/${pkgname}/bin
+    install -m755 $startdir/bin/{initialize,upgrade,activate-plugin,activate-theme}.pl $pkgdir/usr/share/${pkgname}/bin/
+
+# Code
+    cp -dr --no-preserve=ownership $srcdir/wordpress $pkgdir/usr/share/${pkgname}/
+}

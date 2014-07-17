@@ -1,0 +1,14 @@
+#
+# Apache config file fragment for app Wordpress at ${site.hostname}${appconfig.context}
+#
+
+RewriteEngine on
+Options +FollowSymLinks
+Options +Indexes
+
+RewriteBase ${appconfig.context}/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . ${appconfig.apache2.dir}/index.php [L]
+
+SetEnv APPCONFIG_DIR ${appconfig.apache2.dir}

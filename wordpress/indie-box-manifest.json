@@ -1,0 +1,176 @@
+{
+    "type" : "app",
+
+    "info" : {
+        "package"         : "##pkgname##",
+        "name"            : "Wordpress",
+        "tagline"         : "##pkgdesc##",
+        "description"     : "##description##",
+
+        "developer"       : "##developer##",
+        "maintainer"      : "##maintainer##",
+
+        "upstreamversion" : "##pkgver##",
+        "packageversion"  : "##pkgver##-##pkgrel##",
+
+        "licenses" : [
+            "##license##"
+        ]
+    },
+
+    "roles" : {
+        "apache2" : {
+            "defaultcontext" : "/blog",
+            "depends" : [
+                # List of dependencies taken from Ubuntu wordpress package
+                "php",
+                "php-apache",
+                "php-gd",
+            ],
+            "apache2modules" : [
+                "php5",
+                "rewrite"
+            ],
+            "phpmodules" : [
+                "gd",
+                "iconv",
+                "mysql",
+                "mysqli",
+                "pdo_mysql",
+                "zip",
+                "openssl"
+            ],
+
+            "wellknown" : {
+                "robotstxt" : {
+                    "disallow" : [
+                        "/wp_admin"
+                    ]
+                }
+            },
+
+            "appconfigitems" : [
+                {
+                    "type" : "directorytree",
+                    "names" : [
+                        "index.php",
+                        "wp-activate.php",
+                        "wp-admin",
+                        "wp-blog-header.php",
+                        "wp-comments-post.php",
+                        "wp-cron.php",
+                        "wp-includes",
+                        "wp-links-opml.php",
+                        "wp-load.php",
+                        "wp-login.php",
+                        "wp-mail.php",
+                        "wp-settings.php",
+                        "wp-signup.php",
+                        "wp-trackback.php",
+                        "xmlrpc.php"
+                    ],
+                    "source" : "/usr/share/wordpress/wordpress/$2"
+                },
+                {
+                    "type" : "directory",
+                    "name" : "wp-content"
+                },
+                {
+                    "type"  : "directory",
+                    "names" : [
+                        "wp-content/plugins",
+                        "wp-content/themes"
+                    ]
+                },
+                {
+                    "type" : "directorytree",
+                    "names" : [
+                        "wp-content/plugins/akismet",
+                        "wp-content/themes/twentytwelve",
+                        "wp-content/themes/twentythirteen",
+                        "wp-content/themes/twentyfourteen"
+                    ],
+                    "source" : "/usr/share/wordpress/wordpress/$1"
+                },
+                {
+                    "type"  : "directory",
+                    "name"  : "wp-content/uploads",
+                    "mode"  : "0755",
+                    "uname" : "${apache2.uname}",
+                    "gname" : "${apache2.gname}",
+                    "retentionpolicy" : "keep",
+                    "retentionbucket" : "uploadsdir"
+                },
+                {
+                    "type"         : "file",
+                    "name"         : "wp-config.php",
+                    "template"     : "tmpl/wp-config.pl",
+                    "templatelang" : "perlscript"
+                },
+                {
+                    "type"         : "file",
+                    "name"         : ".htaccess",
+                    "template"     : "tmpl/htaccess.tmpl",
+                    "templatelang" : "varsubst"
+                },
+                {
+                    "type"         : "file",
+                    "name"         : "wp-content/.htaccess",
+                    "template"     : "tmpl/wp-content-htaccess.tmpl",
+                    "templatelang" : "varsubst"
+                }
+            ],
+            "installers" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "bin/initialize.pl"
+                }
+            ],
+            "upgraders" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "bin/upgrade.pl"
+                }
+            ]
+        },
+        "mysql" : {
+            "appconfigitems" : [
+                {
+                    "type"       : "mysql-database",
+                    "name"       : "maindb",
+                    "retentionpolicy"  : "keep",
+                    "retentionbucket"  : "maindb",
+                    "privileges" : "all privileges"
+                }
+            ]
+        }
+    },
+    "customizationpoints" : {
+        "title" : {
+            "name"    : "Blog Title",
+            "type"    : "string",
+            "required" : false,
+            "default" : {
+                "value" : "My Wordpress Blog"
+            }
+        },
+        "adminname" : {
+            "name"     : "Administrator name",
+            "type"     : "string",
+            "required" : true,
+            "default"  : {
+                "value" : "admin"
+            }
+        },
+        "adminpassword" : {
+            "name"        : "Administrator password",
+            "type"        : "password",
+            "required"    : true
+        },
+        "adminemail" : {
+            "name"        : "Administrator e-mail",
+            "type"        : "email",
+            "required"    : true
+        }
+    }
+}
