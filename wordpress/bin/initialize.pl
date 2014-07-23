@@ -21,9 +21,9 @@ if( 'install' eq $operation ) {
         # use default open_basedir and append Wordpress
 
     my $title      = $config->getResolve( 'installable.customizationpoints.title.value' );
-    my $adminname  = $config->getResolve( 'installable.customizationpoints.adminname.value' );
-    my $adminpass  = $config->getResolve( 'installable.customizationpoints.adminpassword.value' );
-    my $adminemail = $config->getResolve( 'installable.customizationpoints.adminemail.value' );
+    my $adminname  = $config->getResolve( 'site.admin.userid' );
+    my $adminpass  = $config->getResolve( 'site.admin.credential' );
+    my $adminemail = $config->getResolve( 'site.admin.email' );
 
     $title      = IndieBox::Utils::escapeSquote( $title );
     $adminname  = IndieBox::Utils::escapeSquote( $adminname );

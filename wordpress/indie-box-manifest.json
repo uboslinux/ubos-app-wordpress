@@ -153,24 +153,6 @@
             "default" : {
                 "value" : "My Wordpress Blog"
             }
-        },
-        "adminname" : {
-            "name"     : "Administrator name",
-            "type"     : "string",
-            "required" : true,
-            "default"  : {
-                "value" : "admin"
-            }
-        },
-        "adminpassword" : {
-            "name"        : "Administrator password",
-            "type"        : "password",
-            "required"    : true
-        },
-        "adminemail" : {
-            "name"        : "Administrator e-mail",
-            "type"        : "email",
-            "required"    : true
         }
     }
 }
