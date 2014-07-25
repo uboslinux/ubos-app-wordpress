@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Activate a Wordpress plugin. Only invoke from indie-box-manifest.json.
+# Activate a Wordpress plugin. Only invoke from indiebox-manifest.json.
 # Watch out for quotes etc. Perl and PHP use the same way of naming variables.
 #
 

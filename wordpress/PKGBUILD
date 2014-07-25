@@ -2,7 +2,7 @@ _developer=http://wordpress.org/
 _maintainer=http://indieboxproject.org/
 pkgname=$(basename $(pwd))
 pkgver=3.9.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Blog tools, publishing platform, and CMS"
 arch=('any')
 url=$_developer
@@ -29,9 +29,9 @@ END
 
 package() {
 # Manifest
-    mkdir -p $pkgdir/var/lib/indie-box/manifests
-    perl -pe "$_parameterize" $startdir/indie-box-manifest.json > $pkgdir/var/lib/indie-box/manifests/${pkgname}.json
-    chmod 0644 $pkgdir/var/lib/indie-box/manifests/${pkgname}.json
+    mkdir -p $pkgdir/var/lib/indiebox/manifests
+    perl -pe "$_parameterize" $startdir/indiebox-manifest.json > $pkgdir/var/lib/indiebox/manifests/${pkgname}.json
+    chmod 0644 $pkgdir/var/lib/indiebox/manifests/${pkgname}.json
 
 # Icons
     mkdir -p $pkgdir/srv/http/_appicons/$pkgname

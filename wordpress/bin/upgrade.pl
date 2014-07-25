@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Trigger a Wordpress database upgrade. Only invoke from indie-box-manifest.json.
+# Trigger a Wordpress database upgrade. Only invoke from indiebox-manifest.json.
 #
 # Watch out for quotes etc. Perl and PHP use the same way of naming variables.
 #

@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Initialize freshly installed Wordpress. Only invoke from indie-box-manifest.json.
+# Initialize freshly installed Wordpress. Only invoke from indiebox-manifest.json.
 #
 # Watch out for quotes etc. Perl and PHP use the same way of naming variables.
 #

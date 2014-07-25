@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Activate a Wordpress theme. Only invoke from cldstr-manifest.json.
+# Activate a Wordpress theme. Only invoke from indiebox-manifest.json.
 # Watch out for quotes etc. Perl and PHP use the same way of naming variables.
 #
 
