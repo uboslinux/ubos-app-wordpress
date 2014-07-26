@@ -1,13 +1,12 @@
-_developer=http://wordpress.org/
-_maintainer=http://indieboxproject.org/
+developer=http://wordpress.org/
+maintainer=http://indieboxproject.org/
 pkgname=$(basename $(pwd))
 pkgver=3.9.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Blog tools, publishing platform, and CMS"
 arch=('any')
-url=$_developer
-_license=GPL
-license=("$_license")
+url=$developer
+license=("GPL")
 groups=()
 depends=()
 backup=()
@@ -18,12 +17,12 @@ md5sums=('46e303b587ba3d1f951b348d2c477c3c')
 _parameterize=$(cat <<END
     s!##pkgname##!$pkgname!g;
     s/##pkgdesc##/$pkgdesc/g;
-    s!##developer##!$_developer!g;
-    s!##maintainer##!$_maintainer!g;
+    s!##developer##!$developer!g;
+    s!##maintainer##!$maintainer!g;
     s!##pkgver##!$pkgver!g;
     s!##pkgrel##!$pkgrel!g;
-    s!##license##!$_license!g;
-    s!##description##!$_description!g;
+    s!##license##!$license!g;
+    s!##description##!$description!g;
 END
 )
 

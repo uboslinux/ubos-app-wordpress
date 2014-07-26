@@ -1,14 +1,14 @@
-_developer=http://mailchimp.com/
-_maintainer=http://indieboxproject.org/
+developer=http://mailchimp.com/
+maintainer=http://indieboxproject.org/
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
 pkgver=2.11
-pkgrel=2
+pkgrel=3
 pkgdesc="Broadcast posts to Twitter or Facebook"
 arch=('any')
-url=$_developer
-_license=GPL
-license=("$_license")
+url=$developer
+license=GPL
+license=("GPL")
 groups=()
 depends=('wordpress')
 backup=()
@@ -19,13 +19,13 @@ md5sums=('SKIP')
 _parameterize=$(cat <<END
     s!##pkgname##!$pkgname!g;
     s/##pkgdesc##/$pkgdesc/g;
-    s!##developer##!$_developer!g;
-    s!##maintainer##!$_maintainer!g;
+    s!##developer##!$developer!g;
+    s!##maintainer##!$maintainer!g;
     s!##pkgver##!$pkgver!g;
     s!##pkgrel##!$pkgrel!g;
     s!##accessoryid##!$_plugin!g;
-    s!##license##!$_license!g;
-    s!##description##!$_description!g;
+    s!##license##!$license!g;
+    s!##description##!$description!g;
 END
 )
 
