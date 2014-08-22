@@ -5,7 +5,7 @@
 
 use strict;
 
-use IndieBox::Utils;
+use UBOS::Utils;
 
 {
     # This gets evaluated twice per Wordpress appconfig: once during the

@@ -1,14 +1,14 @@
 #!/usr/bin/perl
 #
-# Initialize freshly installed Wordpress. Only invoke from indiebox-manifest.json.
+# Initialize freshly installed Wordpress. Only invoke from ubos-manifest.json.
 #
 # Watch out for quotes etc. Perl and PHP use the same way of naming variables.
 #
 
 use strict;
 
-use IndieBox::Logging;
-use IndieBox::Utils;
+use UBOS::Logging;
+use UBOS::Utils;
 
 if( 'install' eq $operation ) {
     my $dir  = $config->getResolve( 'appconfig.apache2.dir' );
@@ -25,10 +25,10 @@ if( 'install' eq $operation ) {
     my $adminpass  = $config->getResolve( 'site.admin.credential' );
     my $adminemail = $config->getResolve( 'site.admin.email' );
 
-    $title      = IndieBox::Utils::escapeSquote( $title );
-    $adminname  = IndieBox::Utils::escapeSquote( $adminname );
-    $adminpass  = IndieBox::Utils::escapeSquote( $adminpass );
-    $adminemail = IndieBox::Utils::escapeSquote( $adminemail );
+    $title      = UBOS::Utils::escapeSquote( $title );
+    $adminname  = UBOS::Utils::escapeSquote( $adminname );
+    $adminpass  = UBOS::Utils::escapeSquote( $adminpass );
+    $adminemail = UBOS::Utils::escapeSquote( $adminemail );
 
     my $php = <<PHP;
 <?php
@@ -54,7 +54,7 @@ PHP
     # pipe PHP in from stdin
     debug( 'About to execute PHP', $php );
 
-    if( IndieBox::Utils::myexec( $cmd, $php, \$out, \$err ) != 0 ) {
+    if( UBOS::Utils::myexec( $cmd, $php, \$out, \$err ) != 0 ) {
         error( 'Initializing Wordpress failed:', $err );
     }
 }

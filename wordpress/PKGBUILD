@@ -1,36 +1,20 @@
 developer=http://wordpress.org/
-maintainer=http://indieboxproject.org/
+url=$developer
+maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
-pkgver=3.9.1
-pkgrel=4
+pkgver=3.9.2
+pkgrel=1
 pkgdesc="Blog tools, publishing platform, and CMS"
 arch=('any')
-url=$developer
 license=("GPL")
-groups=()
-depends=()
-backup=()
 source=("http://wordpress.org/wordpress-${pkgver}.tar.gz")
 options=('!strip')
-md5sums=('46e303b587ba3d1f951b348d2c477c3c')
-# from http://stackoverflow.com/questions/1251999/sed-how-can-i-replace-a-newline-n
-_parameterize=$(cat <<END
-    s!##pkgname##!$pkgname!g;
-    s/##pkgdesc##/$pkgdesc/g;
-    s!##developer##!$developer!g;
-    s!##maintainer##!$maintainer!g;
-    s!##pkgver##!$pkgver!g;
-    s!##pkgrel##!$pkgrel!g;
-    s!##license##!$license!g;
-    s!##description##!$description!g;
-END
-)
+md5sums=('c942a75d659b801195e53bcbd4770f31')
 
 package() {
 # Manifest
-    mkdir -p $pkgdir/var/lib/indiebox/manifests
-    perl -pe "$_parameterize" $startdir/indiebox-manifest.json > $pkgdir/var/lib/indiebox/manifests/${pkgname}.json
-    chmod 0644 $pkgdir/var/lib/indiebox/manifests/${pkgname}.json
+    mkdir -p $pkgdir/var/lib/ubos/manifests
+    install -m0644 $startdir/ubos-manifest.json $pkgdir/var/lib/ubos/manifests/${pkgname}.json
 
 # Icons
     mkdir -p $pkgdir/srv/http/_appicons/$pkgname

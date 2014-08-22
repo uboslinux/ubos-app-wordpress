@@ -1,0 +1,28 @@
+{
+    "type"  : "accessory",
+
+    "accessoryinfo" : {
+        "appid"         : "wordpress",
+        "accessoryid"   : "semantic-linkbacks",
+        "accessorytype" : "plugin"
+    },
+
+    "roles" : {
+        "apache2" : {
+            "appconfigitems" : [
+                {
+                    "type"   : "directorytree",
+                    "name"   : "wp-content/plugins/semantic-linkbacks",
+                    "source" : "semantic-linkbacks",
+                }
+            ],
+            "installers" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "/usr/share/wordpress/bin/activate-plugin.pl"
+                }
+            ]
+        }
+    }
+}
+

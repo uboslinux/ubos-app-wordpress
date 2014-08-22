@@ -1,16 +1,16 @@
 #!/usr/bin/perl
 #
-# Activate a Wordpress theme. Only invoke from indiebox-manifest.json.
+# Activate a Wordpress theme. Only invoke from ubos-manifest.json.
 # Watch out for quotes etc. Perl and PHP use the same way of naming variables.
 #
 
 use strict;
 
-use IndieBox::Utils;
+use UBOS::Utils;
 
 my $themeName;
 if( 'install' eq $operation ) {
-    $themeName = $config->getResolve( 'installable.accessoryinfo.appaccessoryid' );
+    $themeName = $config->getResolve( 'installable.accessoryinfo.accessoryid' );
 }
 unless( $themeName ) {
     $themeName = 'twentyfourteen';
@@ -36,7 +36,7 @@ my $err = '';
 
 debug( "About to execute PHP:", $php );
 
-if( IndieBox::Utils::myexec( $cmd, $php, \$out, \$err ) != 0 ) {
+if( UBOS::Utils::myexec( $cmd, $php, \$out, \$err ) != 0 ) {
     error( "Activating theme $themeName failed:", $err );
 }
 

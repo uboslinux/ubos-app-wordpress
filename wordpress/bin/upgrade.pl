@@ -1,14 +1,14 @@
 #!/usr/bin/perl
 #
-# Trigger a Wordpress database upgrade. Only invoke from indiebox-manifest.json.
+# Trigger a Wordpress database upgrade. Only invoke from ubos-manifest.json.
 #
 # Watch out for quotes etc. Perl and PHP use the same way of naming variables.
 #
 
 use strict;
 
-use IndieBox::Logging;
-use IndieBox::Utils;
+use UBOS::Logging;
+use UBOS::Utils;
 
 if( 'upgrade' eq $operation ) {
     my $dir  = $config->getResolve( 'appconfig.apache2.dir' );
@@ -37,7 +37,7 @@ PHP
     # pipe PHP in from stdin
     debug( 'About to execute PHP', $php );
 
-    if( IndieBox::Utils::myexec( $cmd, $php, \$out, \$err ) != 0 ) {
+    if( UBOS::Utils::myexec( $cmd, $php, \$out, \$err ) != 0 ) {
         error( 'Upgrading Wordpress failed:', $err );
     }
 }

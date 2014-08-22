@@ -1,25 +1,10 @@
 {
     "type"  : "accessory",
 
-    "info" : {
-        "package"         : "##pkgname##",
-        "name"            : "Social",
-        "tagline"         : "##pkgdesc##",
-
-        "developer"       : "##developer##",
-        "maintainer"      : "##maintainer##",
-
-        "upstreamversion" : "##pkgver##",
-        "packageversion"  : "##pkgver##-##pkgrel##",
-
-        "licenses" : [
-            "##license##"
-        ]
-    },
     "accessoryinfo" : {
-        "appid"            : "wordpress",
-        "appaccessoryid"   : "##accessoryid##",
-        "appaccessorytype" : "plugin"
+        "appid"         : "wordpress",
+        "accessoryid"   : "social",
+        "accessorytype" : "plugin"
     },
 
     "roles" : {

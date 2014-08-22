@@ -1,15 +1,15 @@
 #!/usr/bin/perl
 #
-# Activate a Wordpress plugin. Only invoke from indiebox-manifest.json.
+# Activate a Wordpress plugin. Only invoke from ubos-manifest.json.
 # Watch out for quotes etc. Perl and PHP use the same way of naming variables.
 #
 
 use strict;
 
-use IndieBox::Logging;
-use IndieBox::Utils;
+use UBOS::Logging;
+use UBOS::Utils;
 
-my $pluginName = $config->getResolve( 'installable.accessoryinfo.appaccessoryid' );
+my $pluginName = $config->getResolve( 'installable.accessoryinfo.accessoryid' );
 if( $pluginName ) {
     my $dir  = $config->getResolve( 'appconfig.apache2.dir' );
     my $cmd  =  'HTTP_HOST='     . $config->getResolve( 'site.hostname' );
@@ -51,7 +51,7 @@ PHP
     # pipe PHP in from stdin
     debug( 'About to execute PHP', $php );
 
-    if( IndieBox::Utils::myexec( $cmd, $php, \$out, \$err ) != 0 ) {
+    if( UBOS::Utils::myexec( $cmd, $php, \$out, \$err ) != 0 ) {
         error( "Activating plugin $pluginName failed:", $err );
     }
 } else {
