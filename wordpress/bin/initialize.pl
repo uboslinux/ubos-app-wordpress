@@ -43,6 +43,7 @@ if( 'install' eq $operation ) {
 \$_POST['admin_password2'] = \$_POST['admin_password'];
 \$_POST['admin_email']     = '$adminemail';
 \$_POST['Submit']          = 'Install WordPress';
+\$_POST['language']        = '';
 
 require_once( '../wp-blog-header.php' );
 require_once( 'install.php' );
