@@ -30,8 +30,6 @@ use UBOS::WebAppTest;
 my $TEST = new UBOS::WebAppTest(
     appToTest   => 'wordpress',
     description => 'Tests whether Wordpress comes up',
-    testContext => '/blog',
-    hostname    => 'wordpress-test',
     checks      => [
             new UBOS::WebAppTest::StateCheck(
                     name  => 'virgin',
