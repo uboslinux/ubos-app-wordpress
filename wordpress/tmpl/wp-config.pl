@@ -83,7 +83,7 @@ define('DB_COLLATE', '');
 define('WPLANG', '');
 define('WP_DEBUG', false);
 
-require( '/usr/share/wordpress/wordpress/wp-settings.php' );
+require( 'wp-settings.php' );
 
 RET
 

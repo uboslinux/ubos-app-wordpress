@@ -27,7 +27,6 @@ if( 'upgrade' eq $operation ) {
 
 \$_GET['step'] = 1;
 
-require_once( '../wp-blog-header.php' );
 require_once( 'upgrade.php' );
 PHP
 

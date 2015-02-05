@@ -45,7 +45,6 @@ if( 'install' eq $operation ) {
 \$_POST['Submit']          = 'Install WordPress';
 \$_POST['language']        = '';
 
-require_once( '../wp-blog-header.php' );
 require_once( 'install.php' );
 PHP
 
