@@ -38,6 +38,9 @@ my $TEST = new UBOS::WebAppTest(
                         
                         $c->getMustContain(    '/', 'This is your first post', undef, 'Wrong front page' );
 
+                        my $robotsTxt = $c->absGet( '/robots.txt' );
+                        $c->mustMatch( $robotsTxt, '(?m)^Disallow:.*' . quotemeta( $c->context() . '/wp-admin/' ) . '$', 'robots.txt contribution wrong' );
+
                         return 1;
                     }
             )

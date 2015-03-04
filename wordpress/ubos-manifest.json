@@ -27,7 +27,7 @@
             "wellknown" : {
                 "robotstxt" : {
                     "disallow" : [
-                        "/wp_admin"
+                        "/wp-admin/"
                     ]
                 }
             },
