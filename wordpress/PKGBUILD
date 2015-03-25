@@ -2,14 +2,14 @@ developer=http://wordpress.org/
 url=$developer
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
-pkgver=4.1
-pkgrel=2
+pkgver=4.1.1
+pkgrel=1
 pkgdesc="Blog tools, publishing platform, and CMS"
 arch=('any')
 license=("GPL")
 source=("http://wordpress.org/wordpress-${pkgver}.tar.gz")
 options=('!strip')
-md5sums=('5adac1bfc61b793a1ca9bcb4d67b4d28')
+md5sums=('bcf6532a859ad86d532259b18d78c5cb')
 
 package() {
 # Manifest
