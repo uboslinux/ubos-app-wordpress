@@ -9,7 +9,7 @@ use strict;
 use UBOS::Utils;
 
 my $themeName;
-if( 'install' eq $operation ) {
+if( 'deploy' eq $operation ) {
     $themeName = $config->getResolve( 'installable.accessoryinfo.accessoryid' );
 }
 unless( $themeName ) {
