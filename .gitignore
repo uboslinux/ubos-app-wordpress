@@ -1,2 +1,4 @@
 wordpress-*.tar.gz
 wordpress-*.pkg.*
+pkg/
+src/
