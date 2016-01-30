@@ -17,11 +17,9 @@
             "phpmodules" : [
                 "gd",
                 "iconv",
-                "mysql",
                 "mysqli",
                 "pdo_mysql",
-                "zip",
-                "openssl"
+                "zip"
             ],
 
             "wellknown" : {
