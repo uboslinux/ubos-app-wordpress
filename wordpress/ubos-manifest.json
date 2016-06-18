@@ -18,8 +18,7 @@
                 "gd",
                 "iconv",
                 "mysqli",
-                "pdo_mysql",
-                "zip"
+                "pdo_mysql"
             ],
 
             "wellknown" : {
