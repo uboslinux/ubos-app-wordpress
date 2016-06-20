@@ -3,7 +3,7 @@ url=$developer
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=2.5.0
+pkgver=2.6.0
 pkgrel=1
 pkgdesc="A WebMention plugin for WordPress"
 arch=('any')
@@ -11,7 +11,7 @@ license=("GPL")
 depends=('wordpress')
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
 options=('!strip')
-md5sums=('SKIP')
+sha512sums=('428996f70522f00d4779af71d4be922cc5ca26b9f7cf128bb1f8fb97c6ded64eac5a5e213eea08de2de6550084176f4c73b9405a281e2255f79345df2996daad')
 
 package() {
 # Manifest
