@@ -1,19 +1,19 @@
-developer=https://profiles.wordpress.org/pfefferle/
-url=$developer
+developer=https://wordpress.org/themes/author/pseudoxiah/
+url=https://wordpress.org/themes/pinboard
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
-_plugin=${pkgname/wordpress-plugin-/}
-pkgver=2.6.1
+_theme=${pkgname/wordpress-theme-/}
+pkgver=1.1.12
 pkgrel=1
-pkgdesc="A WebMention plugin for WordPress"
+pkgdesc="A crafty and elegant theme powered by an advanced theme framework and grid system"
 arch=('any')
 license=("GPL")
-source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
 depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('a0666a1331abd6910cbe5763a9a4bb749ac7f62f53c04faf46a359f3ef1490945bcd4b0769bb9b3637ab6a5bcb515f789c0183d776794d0e982360f3b007441e')
+sha512sums=('6a88cb370a33b5772b286bce2accb77126215305504a47f9488949239144441f015503b4ab528bc56e8fa8dee3a9b7104a4c94fdf41ea22c680c04842fe2b99b')
 
 package() {
 # Manifest
@@ -27,5 +27,5 @@ package() {
 # Source
     mkdir -p ${pkgdir}/usr/share/${pkgname}
 
-    cp -a ${startdir}/src/${_plugin} $pkgdir/usr/share/${pkgname}/
+    cp -a ${startdir}/src/${_theme} $pkgdir/usr/share/${pkgname}/
 }

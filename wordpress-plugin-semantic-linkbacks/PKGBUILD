@@ -8,22 +8,24 @@ pkgrel=1
 pkgdesc="Semantic Trackbacks, Pingbacks and WebMentions for WordPress"
 arch=('any')
 license=("GPL")
-depends=('wordpress')
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+depends=(
+    'wordpress'
+)
 options=('!strip')
-md5sums=('SKIP')
+sha512sums=('01e914a75a856a1dce5ca459dae97b58f991d6726c42424443341ca6faa3a2618a300de3c87531a5ebf686d6cad84334f71344037fbe170c04f66f5509398a58')
 
 package() {
 # Manifest
-    mkdir -p $pkgdir/var/lib/ubos/manifests
-    install -m0644 $startdir/ubos-manifest.json $pkgdir/var/lib/ubos/manifests/${pkgname}.json
+    mkdir -p ${pkgdir}/var/lib/ubos/manifests
+    install -m0644 ${startdir}/ubos-manifest.json ${pkgdir}/var/lib/ubos/manifests/${pkgname}.json
 
 # Icons
-    # mkdir -p $pkgdir/srv/http/_appicons/$pkgname
-    # install -m644 $startdir/appicons/{72x72,144x144}.png $pkgdir/srv/http/_appicons/$pkgname/
+    # mkdir -p ${pkgdir}/srv/http/_appicons/${pkgname}
+    # install -m644 ${startdir}/appicons/{72x72,144x144}.png $pkgdir/srv/http/_appicons/${pkgname}/
 
 # Source
-    mkdir -p $pkgdir/usr/share/${pkgname}
+    mkdir -p ${pkgdir}/usr/share/${pkgname}
 
-    cp -a $srcdir/${_plugin} $pkgdir/usr/share/${pkgname}/
+    cp -a ${srcdir}/${_plugin} $pkgdir/usr/share/${pkgname}/
 }

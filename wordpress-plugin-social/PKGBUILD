@@ -8,22 +8,24 @@ pkgrel=1
 pkgdesc="Broadcast posts to Twitter or Facebook"
 arch=('any')
 license=("GPL")
-depends=('wordpress')
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+depends=(
+    'wordpress'
+)
 options=('!strip')
-md5sums=('SKIP')
+sha512sums=('5375460a546070bf9e996d3dda813bce37640e7cf1c8de3f739061ef84c6d572a761a23564ad1d70195d8fe3d9edc0459a0e57be6664f9ef355bb0dcee13bcad')
 
 package() {
 # Manifest
-    mkdir -p $pkgdir/var/lib/ubos/manifests
-    perl -pe "$_parameterize" $startdir/ubos-manifest.json > $pkgdir/var/lib/ubos/manifests/${pkgname}.json
+    mkdir -p ${pkgdir}/var/lib/ubos/manifests
+    install -m644 ${startdir}/ubos-manifest.json ${pkgdir}/var/lib/ubos/manifests/${pkgname}.json
 
 # Icons
-    # mkdir -p $pkgdir/srv/http/_appicons/$pkgname
-    # install -m644 $startdir/appicons/{72x72,144x144}.png $pkgdir/srv/http/_appicons/$pkgname/
+    # mkdir -p ${pkgdir}/srv/http/_appicons/${pkgname}
+    # install -m644 ${startdir}/appicons/{72x72,144x144}.png $pkgdir/srv/http/_appicons/${pkgname}/
 
 # Source
     mkdir -p $pkgdir/usr/share/${pkgname}
 
-    cp -a $startdir/src/${_plugin} $pkgdir/usr/share/${pkgname}/
+    cp -a ${startdir}/src/${_plugin} $pkgdir/usr/share/${pkgname}/
 }

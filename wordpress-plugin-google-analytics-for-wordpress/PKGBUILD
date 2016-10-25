@@ -1,11 +1,11 @@
-developer=https://profiles.wordpress.org/pfefferle/
-url=$developer
+developer=https://profiles.wordpress.org/chriscct7/
+url=https://wordpress.org/plugins/google-analytics-for-wordpress/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=2.6.1
+pkgver=5.5.4
 pkgrel=1
-pkgdesc="A WebMention plugin for WordPress"
+pkgdesc="Connect Google Analytics with WordPress"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
@@ -13,7 +13,7 @@ depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('a0666a1331abd6910cbe5763a9a4bb749ac7f62f53c04faf46a359f3ef1490945bcd4b0769bb9b3637ab6a5bcb515f789c0183d776794d0e982360f3b007441e')
+sha512sums=('b48be20517a04ebaa494dccf0d5549f2b5918c05b7f769733c1e980d581341bbe659a094d7a4298eaf42c65c79c16ce6de2481516ad75bcd3525b28d973a63de')
 
 package() {
 # Manifest
@@ -27,5 +27,5 @@ package() {
 # Source
     mkdir -p ${pkgdir}/usr/share/${pkgname}
 
-    cp -a ${startdir}/src/${_plugin} $pkgdir/usr/share/${pkgname}/
+    cp -a $startdir/src/${_plugin} $pkgdir/usr/share/${pkgname}/
 }

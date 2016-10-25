@@ -1,19 +1,19 @@
-developer=https://profiles.wordpress.org/pfefferle/
-url=$developer
+developer=https://wordpress.org/themes/author/automattic/
+url=https://wordpress.org/themes/p2/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
-_plugin=${pkgname/wordpress-plugin-/}
-pkgver=2.6.1
+_theme=${pkgname/wordpress-theme-/}
+pkgver=1.5.8
 pkgrel=1
-pkgdesc="A WebMention plugin for WordPress"
+pkgdesc="Blogging at the speed of thought"
 arch=('any')
 license=("GPL")
-source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
 depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('a0666a1331abd6910cbe5763a9a4bb749ac7f62f53c04faf46a359f3ef1490945bcd4b0769bb9b3637ab6a5bcb515f789c0183d776794d0e982360f3b007441e')
+sha512sums=('18e2ef53a294ba7f3b746f3e9d275272fc76d82bc728dd090d8c316e2144b19977518d8da1e1f3317b5a813a3ce75416f71a6d6a03a99cca4d3d6f5828640d2d')
 
 package() {
 # Manifest
@@ -27,5 +27,5 @@ package() {
 # Source
     mkdir -p ${pkgdir}/usr/share/${pkgname}
 
-    cp -a ${startdir}/src/${_plugin} $pkgdir/usr/share/${pkgname}/
+    cp -a ${startdir}/src/${_theme} $pkgdir/usr/share/${pkgname}/
 }
