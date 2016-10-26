@@ -11,9 +11,15 @@ use UBOS::Logging;
 use UBOS::Utils;
 
 if( 'upgrade' eq $operation ) {
-    my $dir  = $config->getResolve( 'appconfig.apache2.dir' );
+    my $dir      = $config->getResolve( 'appconfig.apache2.dir' );
+    my $hostname = $config->getResolve( 'site.hostname' );
+
+    if( '*' eq $hostname ) {
+        $hostname = 'localhost'; # best we can do
+    }
+
     my $cmd  = "cd $dir/wp-admin ;";
-    $cmd    .= ' HTTP_HOST='     . $config->getResolve( 'site.hostname' );
+    $cmd    .= ' HTTP_HOST='     . $hostname;
     $cmd    .= ' REQUEST_URI='   . $config->getResolve( 'appconfig.context' );
     $cmd    .= ' APPCONFIG_DIR=' . $dir;
     $cmd    .= ' php';

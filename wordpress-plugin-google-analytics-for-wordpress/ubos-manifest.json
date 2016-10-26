@@ -13,7 +13,7 @@
                 {
                     "type"   : "directorytree",
                     "name"   : "wp-content/plugins/google-analytics-for-wordpress",
-                    "source" : "social",
+                    "source" : "google-analytics-for-wordpress",
                 }
             ],
             "installers" : [

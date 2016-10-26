@@ -13,7 +13,7 @@
                 {
                     "type"   : "directorytree",
                     "name"   : "wp-content/themes/pinboard",
-                    "source" : "p2",
+                    "source" : "pinboard",
                 }
             ],
             "installers" : [

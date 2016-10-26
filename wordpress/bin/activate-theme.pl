@@ -9,15 +9,21 @@ use strict;
 use UBOS::Utils;
 
 my $themeName;
-if( 'deploy' eq $operation ) {
+if( 'install' eq $operation ) {
     $themeName = $config->getResolve( 'installable.accessoryinfo.accessoryid' );
 }
 unless( $themeName ) {
-    $themeName = 'twentyfourteen';
+    $themeName = 'twentysixteen';
 }
 
-my $dir  = $config->getResolve( 'appconfig.apache2.dir' );
-my $cmd  =  'HTTP_HOST='     . $config->getResolve( 'site.hostname' );
+my $dir      = $config->getResolve( 'appconfig.apache2.dir' );
+my $hostname = $config->getResolve( 'site.hostname' );
+
+if( '*' eq $hostname ) {
+    $hostname = 'localhost'; # best we can do
+}
+
+my $cmd  =  'HTTP_HOST='     . $hostname;
 $cmd    .= ' REQUEST_URI='   . $config->getResolve( 'appconfig.context' );
 $cmd    .= ' APPCONFIG_DIR=' . $dir;
 $cmd    .= ' php';
