@@ -9,7 +9,7 @@ arch=('any')
 license=("GPL")
 source=("http://wordpress.org/wordpress-${pkgver}.tar.gz")
 options=('!strip')
-sha512sums=('303c8fe8ec877baf7380677dc22505062613dfc33c03f8858f7c6b9ce7a5825ba00a13395730fa554da9d2b3ccab8c3441e40fbc29fee45f7da44f46aa400981')
+sha512sums=('071df65c3a43557faf351838a661a83e26d8de37c8633dc17a59d773cc91caef640a625b0719606df1fc563fd18af71ba1da22a5b6f345339e73761754484dc5')
 
 package() {
 # Manifest
