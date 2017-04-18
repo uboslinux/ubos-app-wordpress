@@ -66,9 +66,9 @@
                     "type" : "directorytree",
                     "names" : [
                         "wp-content/plugins/akismet",
-                        "wp-content/themes/twentyfourteen",
                         "wp-content/themes/twentyfifteen",
-                        "wp-content/themes/twentysixteen"
+                        "wp-content/themes/twentysixteen",
+                        "wp-content/themes/twentyseventeen"
                     ],
                     "source" : "/usr/share/wordpress/wordpress/$1"
                 },
