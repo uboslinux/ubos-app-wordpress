@@ -1,0 +1,31 @@
+developer=https://profiles.wordpress.org/pfefferle/
+url=https://github.com/pfefferle/SemPress
+maintainer="http://indiecomputing.com/"
+pkgname=$(basename $(pwd))
+_theme=${pkgname/wordpress-theme-/}
+pkgver=1.5.9
+pkgrel=1
+pkgdesc="Blogging at the speed of thought"
+arch=('any')
+license=("GPL")
+source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
+depends=(
+    'wordpress'
+)
+options=('!strip')
+sha512sums=('1439962786af5e386a516bf907e1fe61cb0d5fbd28771ba5ad949bcdbf54b5c7450339b7fdaae5bcb7ac80943a9cd666f1d6d70f407baa605b104a44d2acd78b')
+
+package() {
+# Manifest
+    mkdir -p ${pkgdir}/var/lib/ubos/manifests
+    install -m644 ${startdir}/ubos-manifest.json ${pkgdir}/var/lib/ubos/manifests/${pkgname}.json
+
+# Icons
+    # mkdir -p ${pkgdir}/srv/http/_appicons/${pkgname}
+    # install -m644 ${startdir}/appicons/{72x72,144x144}.png ${pkgdir}/srv/http/_appicons/${pkgname}/
+
+# Source
+    mkdir -p ${pkgdir}/usr/share/${pkgname}
+
+    cp -a ${startdir}/src/${_theme} $pkgdir/usr/share/${pkgname}/
+}
