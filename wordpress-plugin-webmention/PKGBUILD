@@ -1,5 +1,5 @@
 developer=https://profiles.wordpress.org/pfefferle/
-url=$developer
+url=${developer}
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
