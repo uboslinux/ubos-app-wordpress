@@ -1,0 +1,31 @@
+developer=https://wordpress.org/themes/author/raamdev/
+url=https://independentpublisher.me/
+maintainer="http://indiecomputing.com/"
+pkgname=$(basename $(pwd))
+_theme=${pkgname/wordpress-theme-/}
+pkgver=1.8
+pkgrel=1
+pkgdesc="A beautiful reader-focused WordPress theme, for you"
+arch=('any')
+license=("GPL")
+source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
+depends=(
+    'wordpress'
+)
+options=('!strip')
+sha512sums=('6d37962411939ee47d6716794508430aa8fa9cadc5c42d726d7d5c6f08dc93b3c464bf57fc6c094d9a01484ac8d8fa436fbd5b1b936b5a48e6d947aa17c8cc63')
+
+package() {
+# Manifest
+    mkdir -p ${pkgdir}/var/lib/ubos/manifests
+    install -m644 ${startdir}/ubos-manifest.json ${pkgdir}/var/lib/ubos/manifests/${pkgname}.json
+
+# Icons
+    # mkdir -p ${pkgdir}/srv/http/_appicons/${pkgname}
+    # install -m644 ${startdir}/appicons/{72x72,144x144}.png ${pkgdir}/srv/http/_appicons/${pkgname}/
+
+# Source
+    mkdir -p ${pkgdir}/usr/share/${pkgname}
+
+    cp -a ${startdir}/src/${_theme} $pkgdir/usr/share/${pkgname}/
+}

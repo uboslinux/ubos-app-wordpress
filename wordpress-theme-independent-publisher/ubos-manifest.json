@@ -1,0 +1,28 @@
+{
+    "type"  : "accessory",
+
+    "accessoryinfo" : {
+        "appid"         : "wordpress",
+        "accessoryid"   : "independent-publisher",
+        "accessorytype" : "theme"
+    },
+
+    "roles" : {
+        "apache2" : {
+            "appconfigitems" : [
+                {
+                    "type"   : "directorytree",
+                    "name"   : "wp-content/themes/independent-publisher",
+                    "source" : "independent-publisher",
+                }
+            ],
+            "installers" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "/usr/share/wordpress/bin/activate-theme.pl"
+                }
+            ]
+        }
+    }
+}
+
