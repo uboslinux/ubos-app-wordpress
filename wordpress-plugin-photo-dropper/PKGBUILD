@@ -1,0 +1,32 @@
+developer='http://www.photodropper.com/team/'
+url='url=https://wordpress.org/plugins/photo-dropper/'
+maintainer=${developer}
+pkgname=$(basename $(pwd))
+pkgver=2.3.3
+pkgrel=1
+arch=('any')
+arch=('any')
+license=('GPL')
+depends=(
+)
+source=(
+    "http://downloads.wordpress.org/plugin/photo-dropper.${pkgver}.zip"
+)
+sha512sums=(
+    'c440edbde8dd2922c2f612a2f7f9d2ae5bae2dba86f56891c49c7e270b01dc8c9aaa5864657532a850eb3ca0719c782b9af602f369822270784ec7dd37898834'
+)
+
+package() {
+# Manifest
+    mkdir -p ${pkgdir}/var/lib/ubos/manifests
+    install -m0644 ${startdir}/ubos-manifest.json ${pkgdir}/var/lib/ubos/manifests/${pkgname}.json
+
+# Icons
+    mkdir -p ${pkgdir}/srv/http/_appicons/${pkgname}
+    install -m644 ${startdir}/appicons/{72x72,144x144}.png ${pkgdir}/srv/http/_appicons/${pkgname}/
+
+# Source
+    mkdir -p ${pkgdir}/usr/share/${pkgname}
+
+    cp -a ${startdir}/src/photo-dropper ${pkgdir}/usr/share/${pkgname}/
+}

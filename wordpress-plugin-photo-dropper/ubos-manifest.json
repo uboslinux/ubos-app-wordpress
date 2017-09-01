@@ -1,0 +1,27 @@
+{
+    "type"  : "accessory",
+
+    "accessoryinfo" : {
+        "appid"         : "wordpress",
+        "accessoryid"   : "photo-dropper",
+        "accessorytype" : "plugin"
+    },
+
+    "roles" : {
+        "apache2" : {
+            "appconfigitems" : [
+                {
+                    "type"   : "directorytree",
+                    "name"   : "wp-content/plugins/photo-dropper",
+                    "source" : "photo-dropper",
+                }
+            ],
+            "installers" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "/usr/share/wordpress/bin/activate-plugin.pl"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "type"  : "accessory",
+
+    "accessoryinfo" : {
+        "appid"         : "wordpress",
+        "accessoryid"   : "social-networks-auto-poster-facebook-twitter-g",
+        "accessorytype" : "plugin"
+    },
+
+    "roles" : {
+        "apache2" : {
+            "appconfigitems" : [
+                {
+                    "type"   : "directorytree",
+                    "name"   : "wp-content/plugins/social-networks-auto-poster-facebook-twitter-g",
+                    "source" : "social-networks-auto-poster-facebook-twitter-g",
+                }
+            ],
+            "installers" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "/usr/share/wordpress/bin/activate-plugin.pl"
+                }
+            ]
+        }
+    }
+}

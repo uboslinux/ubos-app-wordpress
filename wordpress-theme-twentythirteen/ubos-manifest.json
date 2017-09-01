@@ -1,0 +1,27 @@
+{
+    "type"  : "accessory",
+
+    "accessoryinfo" : {
+        "appid"         : "wordpress",
+        "accessoryid"   : "twentythirteen",
+        "accessorytype" : "theme"
+    },
+
+    "roles" : {
+        "apache2" : {
+            "appconfigitems" : [
+                {
+                    "type"   : "directorytree",
+                    "name"   : "wp-content/themes/twentythirteen",
+                    "source" : "twentythirteen",
+                }
+            ],
+            "installers" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "/usr/share/wordpress/bin/activate-theme.pl"
+                }
+            ]
+        }
+    }
+}
