@@ -55,7 +55,7 @@ my $out = '';
 my $err = '';
 
 # pipe PHP in from stdin
-debug( 'About to execute PHP', $php );
+trace( 'About to execute PHP', $php );
 
 if( UBOS::Utils::myexec( $cmd, $php, \$out, \$err ) != 0 ) {
     error( "Activating plugin $pluginName failed:", $err );

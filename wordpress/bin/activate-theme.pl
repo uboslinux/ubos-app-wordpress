@@ -40,7 +40,7 @@ PHP
 my $out = '';
 my $err = '';
 
-debug( "About to execute PHP:", $php );
+trace( "About to execute PHP:", $php );
 
 if( UBOS::Utils::myexec( $cmd, $php, \$out, \$err ) != 0 ) {
     error( "Activating theme $themeName failed:", $err );
