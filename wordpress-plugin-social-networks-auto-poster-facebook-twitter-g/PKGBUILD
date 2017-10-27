@@ -3,7 +3,7 @@ url='https://wordpress.org/plugins/social-networks-auto-poster-facebook-twitter-
 maintainer=${developer}
 pkgname='wordpress-plugin-social-networks-auto-poster-facebook-twitter-g'
 pkgver=3.8.7
-pkgrel=1
+pkgrel=2
 pkgdesc='Automaticlly publishes posts from your blog to social networks'
 arch=('any')
 license=('GPL')
@@ -13,7 +13,7 @@ source=(
     "http://downloads.wordpress.org/plugin/social-networks-auto-poster-facebook-twitter-g.zip"
 )
 sha512sums=(
-    'be74a8f6b560f24674049f1792508e8bc6731b594163728b70cb9b3cf74b5d18748d23f3d5f489f43674b3216fe30efd58b7f07a92fa44a937af28dc066a7fb9'
+    '37fe87aabbb91c25afd4abfca1653547195d00a4c1d0ed17fb8a26385f7ab3fae8f6105db5adfb6e2181773c0cace6a31601f8c7eaf6915f45ae7301f9a63a17'
 )
 
 package() {
