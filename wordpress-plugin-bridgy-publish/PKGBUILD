@@ -3,7 +3,7 @@ url=https://wordpress.org/plugins/bridgy-publish/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=1.3.0
+pkgver=1.3.1
 pkgrel=1
 pkgdesc="Connects Wordpress to brid.gy to post to social networks"
 arch=('any')
@@ -13,7 +13,7 @@ depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('SKIP')
+sha512sums=('f9e34c510583f3f1c614f7884ddbd80d20e4fcf05e7b41d459d17498f2c0075973a5638e368ad11365c06a3623f2e6c262bf968b82405d5ba03a5fcca0801f58')
 
 package() {
 # Manifest

@@ -3,7 +3,7 @@ url=https://wordpress.org/plugins/indieweb-post-kinds/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=2.6.4
+pkgver=2.6.6
 pkgrel=1
 pkgdesc="Marks up posts as various kinds that other Indieweb sites can understand"
 arch=('any')
@@ -13,7 +13,7 @@ depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('SKIP')
+sha512sums=('703d239109f7247aa79c0c5b91c8cbc350d05f8cb4994002b10e35b8b7fcbceeabeed1687959a2b44c799df6ec16ec74f3c9c8497522b470f9c5fcd1c184e17b')
 
 package() {
 # Manifest

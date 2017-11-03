@@ -3,7 +3,7 @@ url=${developer}
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=3.2.2
+pkgver=3.3.1
 pkgrel=1
 pkgdesc="Helps you establish your IndieWeb identity by extending the user profile"
 arch=('any')
@@ -13,7 +13,7 @@ depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('SKIP')
+sha512sums=('0369742229fc9907ed65056b6a31ce9ede8fbacc881081cf34ac9afc196a0503ec741a54bf17e88c7f16013ce46e773b9d8619b25ae3756a2eb98dca175029cd')
 
 package() {
 # Manifest

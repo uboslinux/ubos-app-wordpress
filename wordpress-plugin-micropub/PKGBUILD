@@ -8,12 +8,12 @@ pkgrel=1
 pkgdesc="Lets you create posts on your site via the open Micropub standard"
 arch=('any')
 license=("GPL")
-source=("http://downloads.wordpress.org/plugin/${_plugin}.zip")
+source=("${_plugin}-${pkgver}.zip::http://downloads.wordpress.org/plugin/${_plugin}.zip")
 depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('SKIP')
+sha512sums=('f78e01a8970a9220c513a2fd1fc241a28a96cd434b5638d6b31b3fc8c62ca86b7bd58a9fdcd4d61e6f6a2a53c5cd4e6febc526dd0bbfff29d328feda583dd6ef')
 
 package() {
 # Manifest

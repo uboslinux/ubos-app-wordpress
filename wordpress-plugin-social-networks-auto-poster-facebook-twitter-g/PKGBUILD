@@ -1,20 +1,19 @@
 developer='http://nextscripts.com/'
 url='https://wordpress.org/plugins/social-networks-auto-poster-facebook-twitter-g/'
 maintainer=${developer}
-pkgname='wordpress-plugin-social-networks-auto-poster-facebook-twitter-g'
-pkgver=3.8.7
-pkgrel=2
+pkgname=$(basename $(pwd))
+_plugin=${pkgname/wordpress-plugin-/}
+pkgver=4.0.7
+pkgrel=1
 pkgdesc='Automaticlly publishes posts from your blog to social networks'
 arch=('any')
 license=('GPL')
+source=("${_plugin}.${pkgver}.zip::http://downloads.wordpress.org/plugin/${_plugin}.zip")
 depends=(
+    'wordpress'
 )
-source=(
-    "http://downloads.wordpress.org/plugin/social-networks-auto-poster-facebook-twitter-g.zip"
-)
-sha512sums=(
-    '37fe87aabbb91c25afd4abfca1653547195d00a4c1d0ed17fb8a26385f7ab3fae8f6105db5adfb6e2181773c0cace6a31601f8c7eaf6915f45ae7301f9a63a17'
-)
+options=('!strip')
+sha512sums=('999052e1cb8d162f193287330a76b8faab15ca4644fbbbc376d315ede76b352bfba2afe47fe2147b39913abcdba0e5159c590673ec5dc7f4a08fd4d324900b9d')
 
 package() {
 # Manifest
@@ -22,11 +21,11 @@ package() {
     install -m0644 ${startdir}/ubos-manifest.json ${pkgdir}/var/lib/ubos/manifests/${pkgname}.json
 
 # Icons
-    mkdir -p ${pkgdir}/srv/http/_appicons/${pkgname}
-    install -m644 ${startdir}/appicons/{72x72,144x144}.png ${pkgdir}/srv/http/_appicons/${pkgname}/
+#    mkdir -p ${pkgdir}/srv/http/_appicons/${pkgname}
+#    install -m644 ${startdir}/appicons/{72x72,144x144}.png ${pkgdir}/srv/http/_appicons/${pkgname}/
 
 # Source
     mkdir -p ${pkgdir}/usr/share/${pkgname}
 
-    cp -a ${startdir}/src/social-networks-auto-poster-facebook-twitter-g ${pkgdir}/usr/share/${pkgname}/
+    cp -a ${srcdir}/${_plugin} $pkgdir/usr/share/${pkgname}/
 }

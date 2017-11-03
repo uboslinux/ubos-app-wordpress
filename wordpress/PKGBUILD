@@ -2,14 +2,14 @@ developer=http://wordpress.org/
 url=$developer
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
-pkgver=4.8
-pkgrel=2
+pkgver=4.8.3
+pkgrel=1
 pkgdesc="Blog tools, publishing platform, and CMS"
 arch=('any')
 license=("GPL")
 source=("http://wordpress.org/wordpress-${pkgver}.tar.gz")
 options=('!strip')
-sha512sums=('20249cf13dbcec198df3ec1feb3a7381c194c7c9f832262e40449f90c5e5b5d3f4b63b6021e78c65cc615e059b1b601881d33ce03e1e4618231329b680511467')
+sha512sums=('696be1c24dec869d896e22b408b17009e8c482545237156f17d4b5f2d726876a17c3cc5c3de632126229747589d74f7b188c06d2a79878efc800bd6db273d709')
 
 package() {
 # Manifest

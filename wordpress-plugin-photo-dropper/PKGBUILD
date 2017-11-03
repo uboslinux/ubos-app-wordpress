@@ -2,19 +2,17 @@ developer='http://www.photodropper.com/team/'
 url='url=https://wordpress.org/plugins/photo-dropper/'
 maintainer=${developer}
 pkgname=$(basename $(pwd))
-pkgver=2.3.3
+_plugin=${pkgname/wordpress-plugin-/}
+pkgver=2.3.4
 pkgrel=1
-arch=('any')
+pkgdesc="The right photo in seconds"
 arch=('any')
 license=('GPL')
+source=("${_plugin}-${pkgver}.zip::http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
 depends=(
+    'wordpress'
 )
-source=(
-    "http://downloads.wordpress.org/plugin/photo-dropper.${pkgver}.zip"
-)
-sha512sums=(
-    'c440edbde8dd2922c2f612a2f7f9d2ae5bae2dba86f56891c49c7e270b01dc8c9aaa5864657532a850eb3ca0719c782b9af602f369822270784ec7dd37898834'
-)
+sha512sums=('ce482737738e9c3043ed4d9834a253a4065fa0fbf67a063a9cf8e0dcdfb7aa4061a9a12dbba989d2a8b1e997d75fc3cc997f0560ee4896f7f227e8920b7cade4')
 
 package() {
 # Manifest
