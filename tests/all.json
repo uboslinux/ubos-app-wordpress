@@ -1,0 +1,39 @@
+{
+   "appconfigs" : [
+      {
+         "appconfigid" : "aa71c0307267e86ab8586be9073e49f6615237e9e",
+         "context" : "/blog",
+         "appid" : "wordpress",
+         "accessoryids" : [
+            "wordpress-theme-pinboard",
+            "wordpress-plugin-syndication-links",
+            "wordpress-plugin-wp-uf2",
+            "wordpress-theme-twentyfourteen",
+            "wordpress-plugin-social-networks-auto-poster-facebook-twitter-g",
+            "wordpress-plugin-semantic-linkbacks",
+            "wordpress-theme-twentytwelve",
+            "wordpress-theme-twentythirteen",
+            "wordpress-theme-sempress",
+            "wordpress-plugin-indieweb",
+            "wordpress-plugin-bridgy-publish",
+            "wordpress-plugin-google-analytics-for-wordpress",
+            "wordpress-plugin-indieweb-post-kinds",
+            "wordpress-plugin-photo-dropper",
+            "wordpress-plugin-webmention",
+            "wordpress-theme-responsive",
+            "wordpress-plugin-micropub",
+            "wordpress-plugin-indieauth",
+            "wordpress-theme-independent-publisher",
+            "wordpress-theme-p2"
+         ]
+      }
+   ],
+   "siteid" : "sa51a5381f2be2597e7df6644f5f4ddd1fe8f28d8",
+   "admin" : {
+      "userid" : "admin",
+      "credential" : "qwerqwer",
+      "username" : "admin",
+      "email" : "test@ubos.net"
+   },
+   "hostname" : "*"
+}
