@@ -1,0 +1,32 @@
+developer=https://indieweb.org/WordPress_Outreach_Club
+url=https://wordpress.org/plugins/indieweb-press-this/
+maintainer="http://indiecomputing.com/"
+pkgname=$(basename $(pwd))
+_plugin=${pkgname/wordpress-plugin-/}
+pkgver=1.0.3
+pkgrel=1
+pkgdesc="Respond to the current page with just two clicks"
+arch=('any')
+license=("GPL")
+source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+releasepage=("https://wordpress.org/plugin/${_plugin}/")  
+depends=(
+    'wordpress'
+)
+options=('!strip')
+sha512sums=('c90f6c5d9f5ce1267efb199edfadf4afb5be851304f02314810a9bc5b035193a2160b8363c9e52c00b64552cb130d7f02e8bb5bccb6c0a42dcaadc7b0ead98f6')
+
+package() {
+# Manifest
+    mkdir -p ${pkgdir}/var/lib/ubos/manifests
+    install -m644 ${startdir}/ubos-manifest.json ${pkgdir}/var/lib/ubos/manifests/${pkgname}.json
+
+# Icons
+    # mkdir -p ${pkgdir}/srv/http/_appicons/${pkgname}
+    # install -m644 ${startdir}/appicons/{72x72,144x144}.png ${pkgdir}/srv/http/_appicons/${pkgname}/
+
+# Source
+    mkdir -p ${pkgdir}/usr/share/${pkgname}
+
+    cp -a $startdir/src/${_plugin} $pkgdir/usr/share/${pkgname}/
+}
