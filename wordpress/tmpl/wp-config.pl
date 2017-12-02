@@ -85,6 +85,13 @@ define('WP_DEBUG', false);
 
 require( 'wp-settings.php' );
 
+// disable automatic updates per
+// https://plugins.trac.wordpress.org/browser/disable-wordpress-core-update/trunk/disable-core-update.php
+// https://plugins.trac.wordpress.org/browser/disable-wordpress-plugin-updates/trunk/disable-plugin-updates.php
+
+remove_action( 'load-update-core.php', 'wp_update_plugins' );
+add_filter( 'pre_site_transient_update_plugins', create_function( '\$a', "return null;" ) );
+
 RET
 
 $ret;
