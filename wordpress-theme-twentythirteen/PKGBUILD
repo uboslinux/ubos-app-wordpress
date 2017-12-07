@@ -8,7 +8,7 @@ developer='http://wordpress.org'
 url='url=https://wordpress.org/themes/twentythirteen/'
 maintainer=${developer}
 pkgname='wordpress-theme-twentythirteen'
-pkgver=2.2
+pkgver=2.3
 pkgrel=1
 pkgdesc='Default Wordpress theme in 2013'
 arch=('any')
@@ -21,6 +21,7 @@ depends=(
 source=(
     "http://downloads.wordpress.org/theme/twentythirteen.${pkgver}.zip"
 )
+releasepage=("https://wordpress.org/themes/twentythirteen/")  
 sha512sums=(
     # Change this checksum to the correct one. Find out what it is by
     # running "makepkg -g"

@@ -9,6 +9,7 @@ pkgdesc="Lets you create posts on your site via the open Micropub standard"
 arch=('any')
 license=("GPL")
 source=("${_plugin}-${pkgver}.zip::http://downloads.wordpress.org/plugin/${_plugin}.zip")
+releasepage=("https://wordpress.org/plugins/${_plugin}/")  
 depends=(
     'wordpress'
 )

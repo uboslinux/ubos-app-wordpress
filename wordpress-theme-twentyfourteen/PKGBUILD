@@ -3,12 +3,13 @@ url=https://wordpress.org/themes/twentyfourteen/
 maintainer=${developer}
 pkgname=$(basename $(pwd))
 _theme=${pkgname/wordpress-theme-/}
-pkgver=2.0
+pkgver=2.1
 pkgrel=1
 pkgdesc='Default Wordpress theme in 2014'
 arch=('any')
 license=('GPL')
 source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
+releasepage=("https://wordpress.org/themes/${_theme}/")  
 depends=(
     'wordpress'
 )

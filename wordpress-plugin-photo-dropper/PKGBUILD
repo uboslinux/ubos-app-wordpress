@@ -9,6 +9,7 @@ pkgdesc="The right photo in seconds"
 arch=('any')
 license=('GPL')
 source=("${_plugin}-${pkgver}.zip::http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+releasepage=("https://wordpress.org/plugins/${_plugin}/")  
 depends=(
     'wordpress'
 )

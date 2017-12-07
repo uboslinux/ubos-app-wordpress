@@ -3,12 +3,13 @@ url=$developer
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=3.5.1
+pkgver=3.6.0
 pkgrel=1
 pkgdesc="Semantic Trackbacks, Pingbacks and WebMentions for WordPress"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+releasepage=('https://wordpress.org/plugins/semantic-linkbacks/')
 depends=(
     'wordpress'
 )

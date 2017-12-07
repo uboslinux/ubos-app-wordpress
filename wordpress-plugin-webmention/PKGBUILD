@@ -9,6 +9,7 @@ pkgdesc="A WebMention plugin for WordPress"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+releasepage=("https://wordpress.org/plugins/${_plugin}/")
 depends=(
     'wordpress'
 )

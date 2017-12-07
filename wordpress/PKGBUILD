@@ -2,12 +2,13 @@ developer=http://wordpress.org/
 url=$developer
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
-pkgver=4.8.3
+pkgver=4.9.1
 pkgrel=1
 pkgdesc="Blog tools, publishing platform, and CMS"
 arch=('any')
 license=("GPL")
 source=("http://wordpress.org/wordpress-${pkgver}.tar.gz")
+releasepage=('https://wordpress.org/download/')
 options=('!strip')
 sha512sums=('696be1c24dec869d896e22b408b17009e8c482545237156f17d4b5f2d726876a17c3cc5c3de632126229747589d74f7b188c06d2a79878efc800bd6db273d709')
 
@@ -27,8 +28,27 @@ package() {
 
 # Scripts
     mkdir -p $pkgdir/usr/share/${pkgname}/bin
-    install -m755 $startdir/bin/{initialize,upgrade,activate-plugin,activate-theme}.pl $pkgdir/usr/share/${pkgname}/bin/
+    install -m755 $startdir/bin/*.pl $pkgdir/usr/share/${pkgname}/bin/
 
 # Code
     cp -dr --no-preserve=ownership $srcdir/wordpress $pkgdir/usr/share/${pkgname}/
+
+# Patch the code so it does not do update checks
+    cat <<'PATCH' > ${pkgdir}/usr/share/${pkgname}/wordpress/wp-includes/wp-functions.php
+
+// UBOS patch to stop update checks, which are not useful in an UBOS context
+// from https://stackoverflow.com/questions/11821419/wordpress-plugin-notifications/14935077#14935077
+
+$stopUpdates = function ($a) {
+    global $wp_version;
+    return (object) array(
+        'last_checked' => time(),
+        'version_checked' => $wp_version,
+    );
+};
+add_filter('pre_site_transient_update_core', $stopUpdates);
+add_filter('pre_site_transient_update_plugins', $stopUpdates);
+add_filter('pre_site_transient_update_themes', $stopUpdates);
+PATCH
+
 }

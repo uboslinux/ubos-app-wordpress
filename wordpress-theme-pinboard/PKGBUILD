@@ -9,6 +9,7 @@ pkgdesc="A crafty and elegant theme powered by an advanced theme framework and g
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
+releasepage=("https://wordpress.org/themes/${_theme}/")  
 depends=(
     'wordpress'
 )

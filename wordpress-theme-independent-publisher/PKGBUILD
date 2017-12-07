@@ -9,6 +9,7 @@ pkgdesc="A beautiful reader-focused WordPress theme, for you"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
+releasepage=("https://wordpress.org/themes/${_theme}/")  
 depends=(
     'wordpress'
 )

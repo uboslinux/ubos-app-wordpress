@@ -8,7 +8,7 @@ developer='http://wordpress.org'
 url='url=https://wordpress.org/themes/twentytwelve/'
 maintainer=${developer}
 pkgname='wordpress-theme-twentytwelve'
-pkgver=2.3
+pkgver=2.4
 pkgrel=1
 pkgdesc='Default Wordpress theme in 2012'
 arch=('any')
@@ -21,6 +21,7 @@ depends=(
 source=(
     "http://downloads.wordpress.org/theme/twentytwelve.${pkgver}.zip"
 )
+releasepage=("https://wordpress.org/themes/twentytwelve/")  
 sha512sums=(
     # Change this checksum to the correct one. Find out what it is by
     # running "makepkg -g"

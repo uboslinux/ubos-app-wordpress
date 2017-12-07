@@ -9,6 +9,7 @@ pkgdesc="Adds basic Microformats to your posts"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+releasepage=("https://wordpress.org/plugins/${_plugin}/")  
 depends=(
     'wordpress'
 )

@@ -3,7 +3,7 @@ url='https://wordpress.org/plugins/social-networks-auto-poster-facebook-twitter-
 maintainer=${developer}
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=4.0.7
+pkgver=4.0.11
 pkgrel=1
 pkgdesc='Automaticlly publishes posts from your blog to social networks'
 arch=('any')
@@ -12,6 +12,7 @@ source=("${_plugin}.${pkgver}.zip::http://downloads.wordpress.org/plugin/${_plug
 depends=(
     'wordpress'
 )
+releasepage=("https://wordpress.org/plugins/${_plugin}/")  
 options=('!strip')
 sha512sums=('999052e1cb8d162f193287330a76b8faab15ca4644fbbbc376d315ede76b352bfba2afe47fe2147b39913abcdba0e5159c590673ec5dc7f4a08fd4d324900b9d')
 

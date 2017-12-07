@@ -3,12 +3,13 @@ url=https://wordpress.org/plugins/indieweb-post-kinds/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=2.6.6
+pkgver=2.7.3
 pkgrel=1
 pkgdesc="Marks up posts as various kinds that other Indieweb sites can understand"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+releasepage=("https://wordpress.org/plugins/${_plugin}/")  
 depends=(
     'wordpress'
 )

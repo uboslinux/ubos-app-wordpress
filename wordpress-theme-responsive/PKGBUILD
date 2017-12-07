@@ -3,12 +3,13 @@ url=https://wordpress.org/themes/responsive/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _theme=${pkgname/wordpress-theme-/}
-pkgver=3.6
+pkgver=3.7
 pkgrel=1
 pkgdesc="A flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
+releasepage=("https://wordpress.org/themes/${_theme}/") 
 depends=(
     'wordpress'
 )

@@ -3,12 +3,13 @@ url=https://wordpress.org/plugins/syndication-links/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=3.2.2
+pkgver=3.2.4
 pkgrel=1
 pkgdesc="Adds rel-syndication/u-syndication links to your content"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+releasepage=("https://wordpress.org/plugins/${_plugin}/")  
 depends=(
     'wordpress'
 )

@@ -8,7 +8,7 @@ pkgrel=1
 pkgdesc="Respond to the current page with just two clicks"
 arch=('any')
 license=("GPL")
-source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+source=("http://downloads.wordpress.org/plugins/${_plugin}.${pkgver}.zip")
 releasepage=("https://wordpress.org/plugin/${_plugin}/")  
 depends=(
     'wordpress'
