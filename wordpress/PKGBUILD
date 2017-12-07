@@ -10,7 +10,7 @@ license=("GPL")
 source=("http://wordpress.org/wordpress-${pkgver}.tar.gz")
 releasepage=('https://wordpress.org/download/')
 options=('!strip')
-sha512sums=('696be1c24dec869d896e22b408b17009e8c482545237156f17d4b5f2d726876a17c3cc5c3de632126229747589d74f7b188c06d2a79878efc800bd6db273d709')
+sha512sums=('1835d8fd0df9931487489d2e67285e7c73ec1783df39621cfbfe52aa8a0b3cba05fd3b842c7fd67ab2b76009f33337dae650f22dd6a3c4aa71eae100541b8a58')
 
 package() {
 # Manifest

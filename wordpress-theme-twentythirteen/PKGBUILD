@@ -23,9 +23,7 @@ source=(
 )
 releasepage=("https://wordpress.org/themes/twentythirteen/")  
 sha512sums=(
-    # Change this checksum to the correct one. Find out what it is by
-    # running "makepkg -g"
-    '9a7b931080a8001addec0aecda8515ef79b2c7be65f5fbc8e62f2beba7d92c9f5b6a7c99ee4e1e1ec7849d3ac66a145983608ef534ea909682bbc97305ff0be5'
+    '9221b3ea36a2aea7f13236eee9aa1dba19875aa14c6fd7058640be0ccb45e596e59097070fe62c202130f182af7f029dcacf7dc1d71b5a59a51cbffc754e3962'
 )
 
 package() {
