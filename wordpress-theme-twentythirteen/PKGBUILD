@@ -5,11 +5,11 @@
 #
 
 developer='http://wordpress.org'
-url='url=https://wordpress.org/themes/twentythirteen/'
+url='https://wordpress.org/themes/twentythirteen/'
 maintainer=${developer}
 pkgname='wordpress-theme-twentythirteen'
 pkgver=2.3
-pkgrel=1
+pkgrel=2
 pkgdesc='Default Wordpress theme in 2013'
 arch=('any')
 license=('GPL')

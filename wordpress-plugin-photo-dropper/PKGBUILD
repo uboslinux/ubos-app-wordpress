@@ -1,10 +1,10 @@
 developer='http://www.photodropper.com/team/'
-url='url=https://wordpress.org/plugins/photo-dropper/'
+url='https://wordpress.org/plugins/photo-dropper/'
 maintainer=${developer}
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
 pkgver=2.3.4
-pkgrel=1
+pkgrel=2
 pkgdesc="The right photo in seconds"
 arch=('any')
 license=('GPL')

@@ -5,11 +5,11 @@
 #
 
 developer='http://wordpress.org'
-url='url=https://wordpress.org/themes/twentytwelve/'
+url='https://wordpress.org/themes/twentytwelve/'
 maintainer=${developer}
 pkgname='wordpress-theme-twentytwelve'
 pkgver=2.4
-pkgrel=1
+pkgrel=2
 pkgdesc='Default Wordpress theme in 2012'
 arch=('any')
 license=('GPL')
