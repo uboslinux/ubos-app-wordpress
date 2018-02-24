@@ -3,7 +3,7 @@ url=https://wordpress.org/plugins/google-analytics-for-wordpress/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=6.2.8
+pkgver=7.0.0
 pkgrel=1
 pkgdesc="Connect Google Analytics with WordPress"
 arch=('any')
@@ -14,7 +14,7 @@ depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('6ab1a4ec336dcc76749b15d5bbac94563de19dd5344524c6cd77c95cdcfe8b16bbb863877f5e9004e4288c22cad3a8a3edc74fc290a690af1e322820f1b3e5e9')
+sha512sums=('8e33f1c6deabf640d1b2ec98e1cf58105dc8ba37dd5cbe3749afa1907f727622972c051a2e2826f4c488789a80c069552f4352655c6548698a61973fbf800f7b')
 
 package() {
 # Manifest

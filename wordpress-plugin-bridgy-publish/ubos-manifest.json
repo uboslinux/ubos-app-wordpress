@@ -4,7 +4,10 @@
     "accessoryinfo" : {
         "appid"         : "wordpress",
         "accessoryid"   : "bridgy-publish",
-        "accessorytype" : "plugin"
+        "accessorytype" : "plugin",
+        "requires" : [
+            "wordpress-plugin-webmention"
+        ]
     },
 
     "roles" : {
