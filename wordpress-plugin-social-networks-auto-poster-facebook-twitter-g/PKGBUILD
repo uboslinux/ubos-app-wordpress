@@ -14,7 +14,7 @@ depends=(
 )
 releasepage=("https://wordpress.org/plugins/${_plugin}/")  
 options=('!strip')
-sha512sums=('689ea9e90bf1751dcb734fb8ead069ba6457fbcd78682a3a8003999dbec7f996cd6286ec4ce5cd1e70d00e715a04a6b549630c4ffe76af606fc1b78ddf27f8e1')
+sha512sums=('SKIP')
 
 package() {
 # Manifest

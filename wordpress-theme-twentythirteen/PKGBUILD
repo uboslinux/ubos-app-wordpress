@@ -23,7 +23,7 @@ source=(
 )
 releasepage=("https://wordpress.org/themes/twentythirteen/")  
 sha512sums=(
-    '9221b3ea36a2aea7f13236eee9aa1dba19875aa14c6fd7058640be0ccb45e596e59097070fe62c202130f182af7f029dcacf7dc1d71b5a59a51cbffc754e3962'
+    'SKIP'
 )
 
 package() {
