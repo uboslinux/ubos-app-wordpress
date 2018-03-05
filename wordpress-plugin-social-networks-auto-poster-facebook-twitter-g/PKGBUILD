@@ -3,7 +3,7 @@ url='https://wordpress.org/plugins/social-networks-auto-poster-facebook-twitter-
 maintainer=${developer}
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=4.0.11
+pkgver=4.1.5
 pkgrel=1
 pkgdesc='Automaticlly publishes posts from your blog to social networks'
 arch=('any')
@@ -14,7 +14,7 @@ depends=(
 )
 releasepage=("https://wordpress.org/plugins/${_plugin}/")  
 options=('!strip')
-sha512sums=('1583cccaec10ac461be1d99fbc53c5f8c072f7e0328bba3b94b8f2f2ce6c2c1a7e3c7b600b55d706a2802de11f9e1a34071bd9563867347c1c8b1d39c05b0f7b')
+sha512sums=('689ea9e90bf1751dcb734fb8ead069ba6457fbcd78682a3a8003999dbec7f996cd6286ec4ce5cd1e70d00e715a04a6b549630c4ffe76af606fc1b78ddf27f8e1')
 
 package() {
 # Manifest
