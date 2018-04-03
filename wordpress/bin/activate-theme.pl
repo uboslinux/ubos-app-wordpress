@@ -29,7 +29,7 @@ my $cmd  =  'HTTP_HOST='     . $hostname;
 $cmd    .= ' REQUEST_URI='   . $config->getResolve( 'appconfig.context' );
 $cmd    .= ' APPCONFIG_DIR=' . $dir;
 $cmd    .= ' php';
-$cmd    .= ' -d "open_basedir=\'/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/usr/share/wordpress/wordpress/\'"';
+$cmd    .= ' -d "open_basedir=\'/ubos/http/:/tmp/:/usr/share/pear/:/ubos/share/wordpress/wordpress/\'"';
 
 # need to replace Perl variable with string in this PHP
 my $php = <<PHP;

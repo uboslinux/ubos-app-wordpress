@@ -28,15 +28,13 @@ sha512sums=(
 
 package() {
 # Manifest
-    mkdir -p ${pkgdir}/var/lib/ubos/manifests
-    install -m0644 ${startdir}/ubos-manifest.json ${pkgdir}/var/lib/ubos/manifests/${pkgname}.json
+    install -D -m0644 ${startdir}/ubos-manifest.json ${pkgdir}/ubos/lib/ubos/manifests/${pkgname}.json
 
 # Icons
-    mkdir -p ${pkgdir}/srv/http/_appicons/${pkgname}
-    install -m644 ${startdir}/appicons/{72x72,144x144}.png ${pkgdir}/srv/http/_appicons/${pkgname}/
+    install -D -m644 ${startdir}/appicons/{72x72,144x144}.png -t ${pkgdir}/ubos/http/_appicons/${pkgname}/
 
 # Source
-    mkdir -p ${pkgdir}/usr/share/${pkgname}
+    mkdir -p ${pkgdir}/ubos/share/${pkgname}
 
-    cp -a ${startdir}/src/twentythirteen ${pkgdir}/usr/share/${pkgname}/
+    cp -a ${startdir}/src/twentythirteen ${pkgdir}/ubos/share/${pkgname}/
 }

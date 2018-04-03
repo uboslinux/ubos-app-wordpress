@@ -25,7 +25,7 @@ if( 'install' eq $operation ) {
     $cmd    .= ' REQUEST_URI='   . $config->getResolve( 'appconfig.context' );
     $cmd    .= ' APPCONFIG_DIR=' . $dir;
     $cmd    .= ' php';
-    $cmd    .= ' -d "open_basedir=\'/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/usr/share/wordpress/wordpress/\'"';
+    $cmd    .= ' -d "open_basedir=\'/ubos/http/:/tmp/:/usr/share/pear/:/ubos/share/wordpress/wordpress/\'"';
         # use default open_basedir and append Wordpress
 
     my $title      = $config->getResolve( 'installable.customizationpoints.title.value' );
@@ -69,4 +69,3 @@ PHP
 }
 
 1;
-

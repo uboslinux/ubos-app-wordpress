@@ -22,7 +22,7 @@
             "installers" : [
                 {
                     "type"   : "perlscript",
-                    "source" : "/usr/share/wordpress/bin/activate-plugin.pl"
+                    "source" : "/ubos/share/wordpress/bin/activate-plugin.pl"
                 }
             ]
         }

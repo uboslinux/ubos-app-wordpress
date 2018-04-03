@@ -49,7 +49,7 @@
                         "wp-trackback.php",
                         "xmlrpc.php"
                     ],
-                    "source" : "/usr/share/wordpress/wordpress/$2"
+                    "source" : "/ubos/share/wordpress/wordpress/$2"
                 },
                 {
                     "type" : "directory",
@@ -70,7 +70,7 @@
                         "wp-content/themes/twentysixteen",
                         "wp-content/themes/twentyseventeen"
                     ],
-                    "source" : "/usr/share/wordpress/wordpress/$1"
+                    "source" : "/ubos/share/wordpress/wordpress/$1"
                 },
                 {
                     "type"  : "directory",
