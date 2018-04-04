@@ -14,7 +14,7 @@ depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('9b8d770cb4d724b6078ae5ad9f43d770c6e46d648a13d5df2535d6f544124aa024ea768ba232dd5d28c4d3a8f73bd2596dd982af4f67821385bfcbca7f7c0415')
+sha512sums=('1e62cb35b2f8adfe38983439340f09f2fb2eafbc481d3dd23d71623c2efce4a9e948831350ca62b2e49c255b9f93677bdc67a9efa1f450783baf40fbc4b35be2')
 
 package() {
 # Manifest
