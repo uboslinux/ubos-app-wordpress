@@ -19,7 +19,7 @@
             "installers" : [
                 {
                     "type"   : "perlscript",
-                    "source" : "/usr/share/wordpress/bin/activate-theme.pl"
+                    "source" : "/ubos/share/wordpress/bin/activate-theme.pl"
                 }
             ]
         }
