@@ -3,7 +3,7 @@ url=https://wordpress.org/themes/responsive/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _theme=${pkgname/wordpress-theme-/}
-pkgver=3.12
+pkgver=3.13
 pkgrel=1
 pkgdesc="A flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment"
 arch=('any')
@@ -14,7 +14,7 @@ depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('4319f4e3bc47fb0a7ef74700661d1b8aeebba8f3e9c42791b0524539c76469cd7103df1594ef3214d4e402a2cf60f11c00ce64e5f338a8089e53f892183a647f')
+sha512sums=('9db1a3ae19ae4fdc53c3043c46e68afa86177f7cb23161854f2c1294b4ec09bd724a2990032517167545ed19fbc78aaef275197b42a79b9c79a3c2ac23fdb5d1')
 
 package() {
 # Manifest
