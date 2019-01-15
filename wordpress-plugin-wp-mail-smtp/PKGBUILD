@@ -1,0 +1,30 @@
+developer=https://wpforms.com/
+url=https://wordpress.org/plugins/wp-ef2wp-mail-smtp/
+maintainer="http://indiecomputing.com/"
+pkgname=$(basename $(pwd))
+_plugin=${pkgname/wordpress-plugin-/}
+pkgver=1.4.1
+pkgrel=1
+pkgdesc="Wordpress mail SMTP plug-in"
+arch=('any')
+license=("GPL")
+source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
+releasepage=("https://wordpress.org/plugins/${_plugin}/")
+depends=(
+    'wordpress'
+)
+options=('!strip')
+sha512sums=('SKIP')
+
+package() {
+# Manifest
+    install -D -m644 ${startdir}/ubos-manifest.json ${pkgdir}/ubos/lib/ubos/manifests/${pkgname}.json
+
+# Icons
+    # install -D -m644 ${startdir}/appicons/{72x72,144x144}.png -t ${pkgdir}/ubos/http/_appicons/${pkgname}/
+
+# Source
+    mkdir -p ${pkgdir}/ubos/share/${pkgname}
+
+    cp -a ${startdir}/src/${_plugin} ${pkgdir}/ubos/share/${pkgname}/
+}
