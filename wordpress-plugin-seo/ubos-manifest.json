@@ -13,7 +13,7 @@
                 {
                     "type"   : "directorytree",
                     "name"   : "wp-content/plugins/wordpress-seo",
-                    "source" : "semantic-linkbacks",
+                    "source" : "wordpress-seo",
                 }
             ],
             "installers" : [
