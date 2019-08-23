@@ -26,6 +26,11 @@
                     "disallow" : [
                         "/wp-admin/"
                     ]
+                },
+                "robots.txt" : {
+                    "disallow" : [
+                        "/wp-admin/"
+                    ]
                 }
             },
 
