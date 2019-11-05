@@ -3,18 +3,18 @@ url=https://wordpress.org/themes/responsive/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _theme=${pkgname/wordpress-theme-/}
-pkgver=3.15
+pkgver=3.24
 pkgrel=1
 pkgdesc="A flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
-releasepage=("https://wordpress.org/themes/${_theme}/") 
+releasepage=("https://wordpress.org/themes/${_theme}/")
 depends=(
     'wordpress'
 )
 options=('!strip')
-sha512sums=('19064c0bf818e49a5307cdeff77106a1547f4b1e7d708e3ea01d0b032642f4ee6f45ada6184c6396c5b9fccc23ef50923760532d2d2ffa36035ff1ced89bcef8')
+sha512sums=('5b904f39859c176afa4bb84286d3e72e02acf13fe9296c5eaca2f0191185ac7bbf37bdca06407563adc68e543ea304af6145094d1a76238d94d081a5ff3c2bd5')
 
 package() {
 # Manifest

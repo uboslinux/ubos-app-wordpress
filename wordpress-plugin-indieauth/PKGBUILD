@@ -3,13 +3,13 @@ url=https://wordpress.org/plugins/indieauth/
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=3.3.2
+pkgver=3.4.2
 pkgrel=1
 pkgdesc="Log into Wordpress via IndieAuth"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")
-releasepage=("https://wordpress.org/plugins/${_plugin}/")  
+releasepage=("https://wordpress.org/plugins/${_plugin}/")
 depends=(
     'wordpress'
 )
