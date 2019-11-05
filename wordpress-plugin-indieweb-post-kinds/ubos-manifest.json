@@ -4,7 +4,10 @@
     "accessoryinfo" : {
         "appid"         : "wordpress",
         "accessoryid"   : "indieweb-post-kinds",
-        "accessorytype" : "plugin"
+        "accessorytype" : "plugin",
+        "requires" : [
+            "wordpress-plugin-classic-editor"
+        ]
     },
 
     "roles" : {
