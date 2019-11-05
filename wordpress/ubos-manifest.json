@@ -5,10 +5,10 @@
         "apache2" : {
             "defaultcontext" : "/blog",
             "depends" : [
-                # List of dependencies taken from Ubuntu wordpress package
                 "php",
                 "php-apache",
                 "php-gd",
+                "smtp-server"
             ],
             "apache2modules" : [
                 "php7",
@@ -102,6 +102,10 @@
                     "name"         : "wp-content/.htaccess",
                     "template"     : "tmpl/wp-content-htaccess.tmpl",
                     "templatelang" : "varsubst"
+                },
+                {
+                    "type" : "systemd-service",
+                    "name" : "smtp-server@${appconfig.appconfigid}"
                 }
             ],
             "installers" : [
