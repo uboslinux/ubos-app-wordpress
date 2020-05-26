@@ -13,7 +13,7 @@
                 {
                     "type"   : "directorytree",
                     "name"   : "wp-content/themes/twentysixteen",
-                    "source" : "twentyfifteen",
+                    "source" : "twentysixteen",
                 }
             ],
             "installers" : [
