@@ -92,7 +92,7 @@ require( 'wp-settings.php' );
 // https://plugins.trac.wordpress.org/browser/disable-wordpress-plugin-updates/trunk/disable-plugin-updates.php
 
 remove_action( 'load-update-core.php', 'wp_update_plugins' );
-add_filter( 'pre_site_transient_update_plugins', create_function( '\$a', "return null;" ) );
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
 
 RET
 
