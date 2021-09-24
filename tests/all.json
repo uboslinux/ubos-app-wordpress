@@ -5,7 +5,6 @@
          "context" : "/blog",
          "appid" : "wordpress",
          "accessoryids" : [
-            "wordpress-plugin-bridgy-publish",
             "wordpress-plugin-classic-editor",
             "wordpress-plugin-google-analytics-for-wordpress",
             "wordpress-plugin-indieauth",
@@ -13,7 +12,6 @@
             "wordpress-plugin-indieweb-post-kinds",
             "wordpress-plugin-indieweb-press-this",
             "wordpress-plugin-micropub",
-            "wordpress-plugin-photo-dropper",
             "wordpress-plugin-pterotype",
             "wordpress-plugin-semantic-linkbacks",
             "wordpress-plugin-seo",
@@ -31,6 +29,8 @@
             "wordpress-theme-twentyfifteen",
             "wordpress-theme-twentyfourteen",
             "wordpress-theme-twentythirteen",
+            "wordpress-theme-twentysixteen",
+            "wordpress-theme-twentyseventeen",
             "wordpress-theme-twentytwelve",
          ]
       }

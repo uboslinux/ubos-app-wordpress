@@ -58,7 +58,7 @@ my $ret = <<RET;
 // Config file fragment for app Wordpress at $hostname$context
 //
 
-define('WP_HOME',  (\$_SERVER['HTTPS'] ? 'https://' : 'http://' ) . \$_SERVER['HTTP_HOST'] . '$context' );
+define('WP_HOME',  (( array_key_exists( 'HTTPS', \$_SERVER ) && \$_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) . \$_SERVER['HTTP_HOST'] . '$context' );
 
 define('WP_SITEURL', WP_HOME );
 
@@ -92,8 +92,11 @@ require( 'wp-settings.php' );
 // https://plugins.trac.wordpress.org/browser/disable-wordpress-plugin-updates/trunk/disable-plugin-updates.php
 
 remove_action( 'load-update-core.php', 'wp_update_plugins' );
-define( 'AUTOMATIC_UPDATER_DISABLED', true );
 
+add_filter( 'pre_site_transient_update_plugins', 'NoopFunction' );
+function NoopFunction() {
+    return null;
+}
 RET
 
 $ret;
