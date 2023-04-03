@@ -1,11 +1,11 @@
 developer=http://wordpress.org/
-url=https://wordpress.org/themes/twentyseventeen/
+url=https://wordpress.org/themes/twentytwenty/
 maintainer=${developer}
 pkgname=$(basename $(pwd))
 _theme=${pkgname/wordpress-theme-/}
-pkgver=3.2
+pkgver=2.2
 pkgrel=1
-pkgdesc='Default Wordpress theme in 2017'
+pkgdesc='Default Wordpress theme in 2020'
 arch=('any')
 license=('GPL')
 source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
@@ -26,5 +26,5 @@ package() {
 # Source
     mkdir -p ${pkgdir}/ubos/share/${pkgname}
 
-    cp -a ${startdir}/src/twentyseventeen ${pkgdir}/ubos/share/${pkgname}/
+    cp -a ${startdir}/src/twentytwenty ${pkgdir}/ubos/share/${pkgname}/
 }

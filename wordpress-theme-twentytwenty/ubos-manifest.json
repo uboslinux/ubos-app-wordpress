@@ -3,7 +3,7 @@
 
     "accessoryinfo" : {
         "appid"         : "wordpress",
-        "accessoryid"   : "pinboard",
+        "accessoryid"   : "twentytwenty",
         "accessorytype" : "theme"
     },
 
@@ -12,8 +12,8 @@
             "appconfigitems" : [
                 {
                     "type"   : "directorytree",
-                    "name"   : "wp-content/themes/pinboard",
-                    "source" : "pinboard",
+                    "name"   : "wp-content/themes/twentytwenty",
+                    "source" : "twentytwenty",
                 }
             ],
             "installers" : [

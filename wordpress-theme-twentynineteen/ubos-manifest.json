@@ -3,7 +3,7 @@
 
     "accessoryinfo" : {
         "appid"         : "wordpress",
-        "accessoryid"   : "independent-publisher",
+        "accessoryid"   : "twentynineteen",
         "accessorytype" : "theme"
     },
 
@@ -12,8 +12,8 @@
             "appconfigitems" : [
                 {
                     "type"   : "directorytree",
-                    "name"   : "wp-content/themes/independent-publisher",
-                    "source" : "independent-publisher",
+                    "name"   : "wp-content/themes/twentynineteen",
+                    "source" : "twentynineteen",
                 }
             ],
             "installers" : [

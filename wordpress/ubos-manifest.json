@@ -72,8 +72,8 @@
                     "type" : "directorytree",
                     "names" : [
                         "wp-content/plugins/akismet",
-                        "wp-content/themes/twentytwenty",
-                        "wp-content/themes/twentynineteen"
+                        "wp-content/themes/twentytwentyone",
+                        "wp-content/themes/twentytwentytwo"
                     ],
                     "source" : "/ubos/share/wordpress/wordpress/$1"
                 },
