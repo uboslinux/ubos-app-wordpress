@@ -1,11 +1,11 @@
-developer=https://notiz.blog/
-url=https://wordpress.org/plugins/indieauth/
+developer=https://profiles.wordpress.org/pfefferle/
+url=${developer}
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=4.4.2
+pkgver=3.2.7
 pkgrel=1
-pkgdesc="Log into Wordpress via IndieAuth"
+pkgdesc="Enables WebFinger support for WordPress"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")

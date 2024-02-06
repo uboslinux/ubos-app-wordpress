@@ -1,11 +1,11 @@
-developer=https://notiz.blog/
-url=https://wordpress.org/plugins/indieauth/
+developer=https://wordpress.org/plugin/friends/
+url=${developer}
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/wordpress-plugin-/}
-pkgver=4.4.2
+pkgver=2.8.3
 pkgrel=1
-pkgdesc="Log into Wordpress via IndieAuth"
+pkgdesc="Allows you to follow content from other WordPress sites"
 arch=('any')
 license=("GPL")
 source=("http://downloads.wordpress.org/plugin/${_plugin}.${pkgver}.zip")

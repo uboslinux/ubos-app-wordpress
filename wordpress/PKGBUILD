@@ -2,7 +2,7 @@ developer=http://wordpress.org/
 url=$developer
 maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
-pkgver=6.2.2
+pkgver=6.4.2
 pkgrel=1
 pkgdesc="Blog tools, publishing platform, and CMS"
 arch=('any')
@@ -10,7 +10,7 @@ license=("GPL")
 source=("http://wordpress.org/wordpress-${pkgver}.tar.gz")
 releasepage=('https://wordpress.org/download/')
 options=('!strip')
-sha512sums=('346c8c38e139b4a1de491a767fe34d1ff63b9ce4fbe62d2d5957c5b57704c47bed12c34e753324e018297a95a2e82e9d393e6255b540e22e0cecc74d4f557264')
+sha512sums=('05f23101169d9340000121569b0b1676acc5f144e6e5f1fc320f41e3f57899b39c065049b3cf43fe278248cf51f7102853afa8673ba1be503f5a1016c593db68')
 
 package() {
 # Manifest

@@ -3,17 +3,25 @@
 
     "accessoryinfo" : {
         "appid"         : "wordpress",
-        "accessoryid"   : "semantic-linkbacks",
+        "accessoryid"   : "activitypub",
         "accessorytype" : "plugin"
     },
 
     "roles" : {
         "apache2" : {
+            "wellknown" : {
+                "webfinger" : {
+                    "proxy" : "${site.protocol}://${site.hostnameorlocalhost}${appconfig.context}/index.php/.well-known/webfinger"
+                },
+                "nodeinfo" : {
+                    "location" : "${appconfig.context}/index.php/.well-known/nodeinfo"
+                }
+            },
             "appconfigitems" : [
                 {
                     "type"   : "directorytree",
-                    "name"   : "wp-content/plugins/semantic-linkbacks",
-                    "source" : "semantic-linkbacks",
+                    "name"   : "wp-content/plugins/activitypub",
+                    "source" : "activitypub",
                 }
             ],
             "installers" : [
