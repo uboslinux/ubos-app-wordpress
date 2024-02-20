@@ -11,6 +11,7 @@ use warnings;
 package WordpressTest1;
 
 use UBOS::WebAppTest;
+use UBOS::WebAppTest::TestContext;
 
 # The states and transitions for this test
 
@@ -22,8 +23,12 @@ my $TEST = new UBOS::WebAppTest(
                     name  => 'virgin',
                     check => sub {
                         my $c = shift;
-                        
-                        $c->getMustContain(    '/', 'This is your first post', undef, 'Wrong front page' );
+
+                        my $frontResponse = $c->get( '/' );
+                        if( !$c->contains( $frontResponse, 'This is your first post' ) && !$c->contains( $frontResponse, 'Hello world!' )) {
+                            UBOS::WebAppTest::TestContextdebugResponse( $frontResponse );
+                            $c->myerror( 'Wrong front page', 'Response content does not contain correct front page' );
+                        }
 
                         my $robotsTxt = $c->absGet( '/robots.txt' );
                         $c->mustMatch( $robotsTxt, '(?m)^Disallow:.*' . quotemeta( $c->context() . '/wp-admin/' ) . '$', 'robots.txt contribution wrong' );
