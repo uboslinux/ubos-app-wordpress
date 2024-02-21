@@ -13,7 +13,7 @@
                 {
                     "type"   : "directorytree",
                     "name"   : "wp-content/plugins/friends",
-                    "source" : "activitypub",
+                    "source" : "friends",
                 }
             ],
             "installers" : [

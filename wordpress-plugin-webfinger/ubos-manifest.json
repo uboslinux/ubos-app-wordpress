@@ -13,7 +13,7 @@
                 {
                     "type"   : "directorytree",
                     "name"   : "wp-content/plugins/webfinger",
-                    "source" : "activitypub",
+                    "source" : "webfinger",
                 }
             ],
             "installers" : [
