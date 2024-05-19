@@ -5,14 +5,15 @@
          "context" : "/blog",
          "appid" : "wordpress",
          "accessoryids" : [
+            "wordpress-plugin-activitypub",
             "wordpress-plugin-classic-editor",
+            "wordpress-plugin-friends",
             "wordpress-plugin-google-analytics-for-wordpress",
             "wordpress-plugin-indieauth",
             "wordpress-plugin-indieweb",
             "wordpress-plugin-indieweb-post-kinds",
             "wordpress-plugin-indieweb-press-this",
             "wordpress-plugin-micropub",
-            "wordpress-plugin-semantic-linkbacks",
             "wordpress-plugin-seo",
             "wordpress-plugin-simple-location",
             "wordpress-plugin-social-networks-auto-poster-facebook-twitter-g",
@@ -29,7 +30,11 @@
             "wordpress-theme-twentysixteen",
             "wordpress-theme-twentyseventeen",
             "wordpress-theme-twentynineteen",
-            "wordpress-theme-twentytwenty"
+            "wordpress-theme-twentytwenty",
+            "wordpress-theme-twentytwentyone",
+            "wordpress-theme-twentytwentytwo",
+            "wordpress-theme-twentytwentythree",
+            "wordpress-theme-twentytwentyfour"
          ]
       }
    ],

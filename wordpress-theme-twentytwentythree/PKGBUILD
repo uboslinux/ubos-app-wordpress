@@ -1,11 +1,11 @@
-developer=http://wordpress.org/
-url=https://wordpress.org/themes/twentynineteen/
-maintainer=${developer}
 pkgname=$(basename $(pwd))
 _theme=${pkgname/wordpress-theme-/}
-pkgver=2.8
+pkgver=1.4
 pkgrel=1
-pkgdesc='Default Wordpress theme in 2019'
+pkgdesc='Default Wordpress theme in 2023'
+developer=http://wordpress.org/
+url=https://wordpress.org/themes/${_theme}/
+maintainer=${developer}
 arch=('any')
 license=('GPL')
 source=("http://downloads.wordpress.org/theme/${_theme}.${pkgver}.zip")
@@ -26,5 +26,5 @@ package() {
 # Source
     mkdir -p ${pkgdir}/ubos/share/${pkgname}
 
-    cp -a ${startdir}/src/twentynineteen ${pkgdir}/ubos/share/${pkgname}/
+    cp -a ${startdir}/src/${_theme} ${pkgdir}/ubos/share/${pkgname}/
 }
